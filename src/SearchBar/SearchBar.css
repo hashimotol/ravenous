@@ -1,0 +1,101 @@
+.SearchBar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url("./background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 25rem;
+  }
+  
+  .SearchBar-sort-options ul {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2.22rem;
+    color: #ffffff;
+  }
+
+  .SearchBar-sort-options li {
+    cursor: pointer;
+    width: 4.33rem;
+    border-bottom: 1px solid #fff;
+    padding: 0.33rem 2.58rem 0.33rem 2.58rem;
+    line-height: 1.13;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.83rem;
+    transition: color 0.25s;
+    list-style: none;
+  }
+  
+  .SearchBar-sort-options li:hover {
+    color: #d4cfcf;
+  }
+
+  .SearchBar-sort-options li.active,
+  .SearchBar-sort-options li.active:hover {
+    border-bottom: 1px solid #f0c36c;
+    color: #dbb866;
+    font-weight: bold;
+  }
+
+  .SearchBar-fields {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2.22rem;
+  }
+
+  .SearchBar-fields input {
+    width: 21rem;
+    padding: 0.66rem 1rem;
+    margin-right: 2.22rem;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    font-size: 0.77rem;
+    font-weight: 500;
+  }
+
+  .SearchBar-fields input:last-child {
+    margin-right: 0;
+  }
+
+  .SearchBar-submit {
+    text-align: center;
+  }
+
+  .SearchBar-submit button {
+    border-radius: 4px;
+    padding: 0.72rem 1.7rem;
+    background-color: #cca353;
+    color: #ffffff;
+    font-weight: 600;
+    border: none; /* Remove the default border */
+    cursor: pointer;
+    transition: background-color 0.5s;
+    text-decoration: none;
+}
+
+.SearchBar-submit button:hover {
+    background-color: #b89442;
+}
+  @media only screen and (max-width: 560px) {
+    .SearchBar {
+      background-image: url("./background_search_mobile.jpg");
+    }
+  
+    .SearchBarSortOptions ul {
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
+  
+    .SearchBarFields {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .SearchBarFields input {
+      margin-right: 0;
+      margin-bottom: 0.86rem;
+    }
+  }
+  

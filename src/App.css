@@ -2,6 +2,17 @@
   text-align: center;
 }
 
+.App h1 {
+  background-color: #dbb866;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  margin: 0; /* Removes margin around the h1 */
+  padding: 1rem; /* Adds padding to ensure text is not right on the edge */
+  width: 100%; /* Ensures the background spans the full width */
+  text-align: center; /* Centers the text */
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
