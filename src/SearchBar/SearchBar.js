@@ -1,9 +1,9 @@
 import { render } from '@testing-library/react';
 import React, { useState } from 'react';
+import { getBusinesses } from '../utils/YelpApi';
 import './SearchBar.css';
 
-
-function SearchBar() {
+function SearchBar({ onSearch }) {
     const [term, setTerm] = useState('');
     const [location, setLocation] = useState('');
     const [sortBy, setSortBy] = useState('best_match');
@@ -27,7 +27,7 @@ function SearchBar() {
     };
 
     const handleSearch = (event) => {
-        //onSearch(term, location, sortBy);
+        onSearch(term, location, sortBy);
         event.preventDefault();
     };
 

@@ -1,35 +1,30 @@
 import React from 'react';
 import './Business.css';
 
-function Business() {
-    const business = {
-        imageSrc: 'https://content.codecademy.com/programs/react/ravenous/pizza.jpg',
-        name: 'MarginOtto Pizzeria',
-        address: '1010 Paddington Way',
-        city: 'Flavortown',
-        state: 'NY',
-        zipCode: '10101',
-        category: 'Italian',
-        rating: 4.5,
-        reviewCount: 90
-    };
+function Business(props) {
+    const { business } = props;
+
 
     return (
         <div className='Business'>
             <div className='imageContainer'>
-                <img src={business.imageSrc} />
+                <img src={business.image_url} />
             </div>
             <h3>{business.name}</h3>
             <div className='BusinessInformation'>
                 <div className='BusinessAddress'>
-                    <p>{business.address}</p>
-                    <p>{business.city}</p>
-                    <p>{`${business.state} ${business.zipCode}`}</p>
+                    <p>{business.location.address1}</p>
+                    <p>{business.location.city}</p>
+                    <p>{`${business.location.state} ${business.location.zip_code}`}</p>
                 </div>
                 <div className='BusinessReviews'>
-                    <h3>{business.category}</h3>
+                    <h3>
+                        {business.categories.map((category, index) => (
+                                <span key={index}>{category.title}{index < business.categories.length - 1 ? ', ' : ''}</span>
+                            ))}
+                    </h3>
                     <h3>{`${business.rating} stars`}</h3>
-                    <p>{`${business.reviewCount} reviews`}</p>
+                    <p>{`${business.review_count} reviews`}</p>
                 </div>
             </div>
         </div>
